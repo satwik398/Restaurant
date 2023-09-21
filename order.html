@@ -1,0 +1,178 @@
+<html>
+<head>
+    <style>
+        /* CSS code for styling the order now page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 100px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            margin-left: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .navbar a:hover {
+            color: #555;
+        }
+
+        .order {
+            margin-top: 20px;
+        }
+
+        .order-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .order-subtitle {
+            font-size: 18px;
+            color:#333; 
+            margin-bottom:10px; 
+        }
+
+        .order-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        .order-form label {
+            font-size: 16px;
+            color:#333; 
+            margin-bottom:5px; 
+        }
+
+        .order-form input, .order-form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .order-form input:focus, .order-form select:focus {
+            outline: none;
+            border-color:#333; 
+        }
+
+        .order-form button {
+            grid-column: span 2 / span 2; /* make the button span two columns */
+            width: 100%;
+            padding: 10px;
+            background-color:#333; 
+            color:white; 
+            border:none; 
+            border-radius:10px; 
+        }
+
+        .order-form button:hover {
+           background-color:#555;  
+        }
+
+        .footer {
+           background-color:#333; 
+           color:white; 
+           padding:20px; 
+           text-align:center; 
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <!-- Logo and navigation bar -->
+       <div class="navbar">
+           <img src="https://img.freepik.com/premium-vector/restaurant-logo-design-template_79169-56.jpg?w=2000" alt="Logo" class="logo"> <!-- Replace logo.png with your own logo image -->
+           <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="menu.html">Menu</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="contact.html">Contact</a></li>
+           </ul>
+       </div>
+
+       <!-- Order section -->
+       <div class="order">
+           <h2 class="order-title">Order Now</h2>
+           <h3 class="order-subtitle">Please fill out the form below to place your order</h3>
+
+           <!-- Order form -->
+           <form class="order-form" action="#" method="post">
+               <!-- Name field -->
+               <div class="form-group">
+                   <label for="name">Name</label>
+                   <input type="text" id="name" name="name" placeholder="Enter your name" required>
+               </div>
+
+               <!-- Phone field -->
+               <div class="form-group">
+                   <label for="phone">Phone</label>
+                   <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+               </div>
+
+               <!-- Address field -->
+               <div class="form-group">
+                   <label for="address">Address</label>
+                   <input type="text" id="address" name="address" placeholder="Enter your delivery address" required>
+               </div>
+
+               <!-- Item field -->
+               <div class="form-group">
+                   <label for="item">Item</label>
+                   <select id="item" name="item" required>
+                       <option value="">Select an item from the menu</option>
+                       <option value="Pizza">$10.00 - Pizza</option>
+                       <option value="Burger">$8.00 - Burger</option>
+                       <option value="Pasta">$9.00 - Pasta</option>
+                       <option value="Salad">$7.00 - Salad</option>
+                       <option value="Sandwich">$6.00 - Sandwich</option>
+                       <option value="Dessert">$5.00 - Dessert</option>
+                   </select>
+               </div>
+
+               <!-- Quantity field -->
+               <div class="form-group">
+                   <label for="quantity">Quantity</label>
+                   <input type="number" id="quantity" name="quantity" placeholder="Enter the quantity of your item" min="1" max="10" required>
+               </div>
+
+               <!-- Submit button -->
+               <button type="submit">Place Order</button>
+           </form>
+       </div>
+
+       <!-- Footer section -->
+       <div class="footer">
+           <p>© 2023 Restaurant. All rights reserved.</p>
+       </div>
+    </div>
+</body>
+</html>
